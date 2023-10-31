@@ -17,6 +17,18 @@ const SignIn = () => {
     return password.length >= 8;
   };
 
+  const handleEmailChange = (e) => {
+    const emailValue = e.target.value;
+    setEmail(emailValue);
+    setEmailError(!isEmailValid(emailValue) ? '*Invalid email address' : '');
+  };
+
+  const handlePasswordChange = (e) => {
+    const passwordValue = e.target.value;
+    setPassword(passwordValue);
+    setPasswordError(!isPasswordValid(passwordValue) ? '*Invalid password' : '');
+  };
+
   const handleSignIn = () => {
     setEmailError('');
     setPasswordError('');
@@ -37,7 +49,7 @@ const SignIn = () => {
         <input
           type="text"
           value={email}
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={handleEmailChange}
           placeholder="Enter your email address"
         />
         {emailError && <div className="error-message">{emailError}</div>}
@@ -46,7 +58,7 @@ const SignIn = () => {
         <input
           type="password"
           value={password}
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={handlePasswordChange}
           placeholder="Enter your password here"
         />
         {passwordError && <div className="error-message">{passwordError}</div>}
