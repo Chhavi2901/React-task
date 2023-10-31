@@ -1,16 +1,19 @@
 
 .form-container {
-    width: 300px;
+    width: 350px;
     margin: 0 auto;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #fff;
+    height: 500px;
+    margin-top: 5cm; 
   }
   
   .form-container h1 {
     text-align: center;
+    color: #0056b3;
   } 
   .form-container h3{
     text-align: center;
@@ -18,6 +21,7 @@
   
   .form-group {
     margin-bottom: 20px;
+    margin-right: 20px;
   }
   
   .form-group label {
@@ -32,6 +36,12 @@
     border: 1px solid #ccc;
     border-radius: 5px;
   }
+  .error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 4px;
+  }
+  
   
   .button-container {
     text-align: center;
@@ -40,7 +50,7 @@
   .button-container button {
     background-color: #007bff;
     color: #fff;
-    padding: 10px 20px;
+    padding: 15px 30px;
     border: none;
     border-radius: 5px;
     cursor: pointer;

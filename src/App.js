@@ -14,10 +14,7 @@ const App = () => {
           <div className="top-left"><img src={logo2} alt="Logo" /></div>
           <div className="center"><img src={logo1} alt="Logo" /></div>
         </div>
-        <div className='page'>
-          <Link to="/signin">SignIn</Link>
-          <Link to="/signup">SignUp</Link>
-        </div>
+        
         <Routes>
           <Route path="/signin" element={<SignIn />} />
           <Route path="/signup" element={<SignUp />} />
